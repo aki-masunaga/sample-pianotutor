@@ -1,0 +1,772 @@
+@charset "UTF-8";
+
+body {
+  font-family: "Noto Serif JP", serif;
+}
+
+p {
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  /*ロゴとナビメニューを横並びにする*/
+  justify-content: space-between;
+  /*両端に配置*/
+  align-items: center;
+  /*垂直中央に要素を並べる*/
+  background-color: #c54ea0;
+  padding: 2px;
+  height: 60px;
+}
+
+h1 {
+  width: 200px;
+  padding: 20px;
+}
+
+/*　幅1024px未満では、グローバルナビ非表示　*/
+.global_navi {
+  display: none;
+}
+
+/*　ハンバーガーメニューの設定　*/
+.menu-btn {
+  position: fixed;
+  top: 0px;
+  right: 10px;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  background-color: #c54ea0;
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  position: absolute;
+}
+
+.menu-btn span:before {
+  bottom: 8px;
+}
+
+#menu-btn-check {
+  display: none;
+}
+
+.menu-btn span:after {
+  top: 8px;
+}
+
+#menu-btn-check:checked ~ .menu-btn span {
+  background-color: rgba(255, 255, 255, 0);
+  /*メニューオープン時は真ん中の線を透明にする*/
+}
+
+#menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.menu-content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  z-index: 80;
+  background-color: #c54ea0;
+  opacity: 0.8;
+  /*モバイル用メニューが開いた時の背景色を半透明にする*/
+  transition: all 0.5s;
+  /*アニメーション設定*/
+}
+
+#menu-btn-check:checked ~ .menu-content {
+  left: 0;
+  /*メニューを画面内へ*/
+}
+
+.menu-content ul {
+  padding: 70px 10px 0;
+}
+
+.menu-content ul li {
+  border-bottom: solid 1px #ffffff;
+  list-style: none;
+}
+
+.menu-content ul li a {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+}
+
+.menu-content ul li a::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #ffffff;
+  border-right: solid 2px #ffffff;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 11px;
+  top: 16px;
+}
+
+/*Slider設定*/
+.slider {
+  margin: auto;
+}
+/*-----------height調整----------*/
+.slick-slide {
+  height: auto !important;
+}
+
+/*-----------矢印表示----------*/
+.slick-next {
+  right: 0 !important;
+}
+.slick-prev {
+  left: 0 !important;
+}
+.slick-arrow {
+  z-index: 2 !important;
+}
+
+/*---スライダードットの色を変更（Active時）---*/
+.slick-dots li.slick-active button:before {
+  color: #c54ea0;
+}
+
+/*　リンクボタンの表示を設定　*/
+.detail,
+.profile,
+.contactform {
+  display: block;
+  text-align: center;
+  margin: auto;
+  width: 256px;
+  font-size: 24px;
+  color: #fff;
+  background-color: #c54ea0;
+  border: solid 1px #c54ea0;
+  border-radius: 30px;
+  padding: 15px 0px;
+  transition: 0.2s;
+}
+
+/*　リンクボタンにカーソルを置いた際の標示設定　*/
+.detail:hover,
+.profile:hover,
+.contactform:hover {
+  color: #c54ea0;
+  background-color: #fff;
+}
+
+footer p {
+  font-size: 12px;
+  color: #fff;
+}
+
+/* H2見出しに、長さ99px・太さ3pxの短い下線を付ける */
+.items {
+  color: #c54ea0;
+  font-size: 24px;
+  position: relative;
+  margin-bottom: 60px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.items::before {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  width: 99px;
+  height: 4px;
+  left: calc(50% - 50px);
+  background-color: #c54ea0;
+  border-radius: 3px;
+}
+
+/* 冒頭文 */
+.about {
+  padding: 40px 20px;
+  /* display: flex;
+    justify-content: center; */
+}
+
+/* こんな教室です（特徴） */
+.feature {
+  background-color: #e6dfee;
+  padding: 40px;
+  /*H2見出しまでの距離が40px, PC幅では80px*/
+}
+
+/* 特徴の写真を円にする */
+.feature-list img {
+  border-radius: 50%;
+}
+
+.feature-list li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* 特徴の写真〜説明文のマージンを22px、
+次のリスト写真までのマージンを40px取り、中央揃えにする */
+.feature-list p {
+  text-align: center;
+  padding-top: 22px;
+  padding-bottom: 40px;
+}
+
+/* 講師紹介 */
+.pianist {
+  background-color: #dcebd9;
+  padding: 40px;
+}
+
+.aboutme p {
+  padding: 30px 0px 40px;
+}
+
+/* アクセスと問い合わせ */
+.access,
+.contact {
+  padding: 40px;
+}
+
+.access iframe {
+  padding-bottom: 30px;
+  width: 320px;
+  height: 320px;
+  margin-inline: auto;
+}
+
+.contact a {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  justify-content: center;
+}
+
+/*** 各詳細説明ページ ***/
+.guidancemenu {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.guidancemenu::before {
+  content: "Guidance";
+  position: absolute;
+  font-weight: bold;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #c54ea0;
+  opacity: 30%;
+  font-size: 36px;
+}
+
+.guide {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: auto;
+}
+
+.guidedetail {
+  margin: 28px auto 40px;
+}
+
+.guidedetail p {
+  font-size: 16px;
+  width: 320px;
+}
+
+.guide img {
+  width: 320px;
+  margin: auto;
+}
+
+/**  レッスン料 **/
+.schoolfee {
+  background-color: #e6dfee;
+  padding: 40px 20px;
+}
+
+.feetable {
+  border: 1px solid #333;
+  font-size: 14px;
+  font-weight: lighter;
+  width: 320px;
+  margin: auto;
+}
+
+.feedetail {
+  margin: 30px auto 0;
+}
+
+.feedetail li {
+  margin-top: 14px;
+}
+
+/*  表のタイトル行の背景色を#D9D9D9へ設定 */
+.feetable thead {
+  background-color: #d9d9d9;
+}
+
+.feetable th,
+.feetable td {
+  border: 1px solid #333;
+  padding: 12px 13px;
+}
+
+.feetable th {
+  text-align: center;
+}
+
+.grade {
+  text-align: center;
+}
+
+.yen {
+  text-align: right;
+}
+
+/* イベントの背景色を#DCEBD9に設定 */
+.event {
+  background-color: #dcebd9;
+  padding: 40px 20px;
+}
+
+.event img {
+  width: 320px;
+}
+
+/* 小項目の設定および、アイコンFont Awesome 6を表示する*/
+.useicon {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.useicon::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f001";
+  margin-right: 10px;
+}
+
+.recital p {
+  margin: 20px auto 30px;
+}
+
+.competition p {
+  margin: 20px auto;
+}
+
+/*　フッター　*/
+footer {
+  background-color: #c54ea0;
+  height: 32px;
+  padding: 10px 5px;
+}
+
+/*　ブラウザ幅768px以上での表示設定（タブレット対応）*/
+@media screen and (min-width: 768px) {
+  /* ヘッダー */
+  h1 {
+    width: 230px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 250px;
+    margin: 20px 0;
+    display: flex;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .about {
+    display: flex;
+    justify-content: center;
+  }
+
+  /***　特徴の写真を横並びに表示する　***/
+  .feature-list {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1024px;
+  }
+
+  .feature-list li {
+    width: 220px;
+    margin: 0;
+  }
+
+  .aboutme {
+    display: flex;
+    margin: auto;
+    max-width: 1024px;
+    padding-bottom: 40px;
+  }
+
+  .aboutme img {
+    width: 450px;
+  }
+  .aboutme p {
+    padding: 0px 0px 0px 20px;
+  }
+
+  .access,
+  .contact {
+    padding: 60px 40px;
+  }
+
+  .address {
+    margin-bottom: 10px;
+  }
+
+  /** 教室案内ページの設定 **/
+  .guide {
+    flex-direction: row;
+    margin-bottom: 80px;
+  }
+
+  .guide img {
+    width: 400px;
+    margin: 0 10px;
+  }
+
+  /*レッスン料の表と説明を横並びにする*/
+  .fee {
+    display: flex;
+  }
+
+  .feetable {
+    width: 410px;
+  }
+
+  .feedetail {
+    width: 400px;
+    margin: 0 0 0 20px;
+  }
+
+  .feedetail li {
+    margin: 0 0 20px 0;
+  }
+
+  /* イベントの写真と説明文を横並びにする */
+  .recital,
+  .competition {
+    display: flex;
+    margin: 20px auto 30px;
+  }
+
+  .recital p,
+  .competition p {
+    margin: 0 0 0 20px;
+  }
+
+  /*　ブラウザ幅1024px以上での表示設定　*/
+  @media screen and (min-width: 1024px) {
+    header {
+      height: 75px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .logo {
+      width: 360px;
+      margin: 1px 0 0 10px;
+      display: flex;
+    }
+
+    /*　PC時ハンバーガーメニュー非表示　*/
+    .hamburger-menu {
+      display: none;
+    }
+
+    /*　グローバルナビ表示設定　*/
+    .navi {
+      display: flex;
+      margin-left: auto;
+      font-size: 18px;
+      padding-right: 20px;
+    }
+
+    .global_navi {
+      position: relative;
+      background-color: inherit;
+      height: inherit;
+      display: flex;
+      color: #ffffff;
+    }
+
+    .nav__items {
+      display: flex;
+      align-items: center;
+      height: initial;
+      white-space: nowrap;
+      /*メニュー表示を改行しないようにする*/
+    }
+
+    .nav-items__item {
+      transition: all 0.3s;
+      margin: 0 20px;
+      /*hover時の下線が文字部分のみになるようにするため*/
+      text-align: center;
+      justify-content: center;
+      display: inline-block;
+      position: relative;
+      text-decoration: none;
+    }
+
+    .nav-items__item::after {
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 3px;
+      background: #dcebd9;
+      transform: scale(0, 1);
+      transform-origin: left top;
+      transition: transform 0.3s;
+    }
+
+    .nav-items__item:hover::after {
+      transform: scale(1, 1);
+    }
+
+    h1 {
+      width: 100%;
+    }
+
+    .items {
+      font-size: 30px;
+      margin-bottom: 90px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    .detail,
+    .profile,
+    .contactform {
+      width: 295px;
+      font-size: 30px;
+      border-radius: 40px;
+    }
+
+    .about {
+      padding: 80px 40px;
+    }
+
+    .feature,
+    .pianist {
+      padding: 80px;
+    }
+
+    .feature-list li {
+      width: 262px;
+    }
+
+    .feature-list p {
+      padding-bottom: 60px;
+    }
+
+    .aboutme {
+      padding-bottom: 60px;
+    }
+
+    .aboutme img {
+      width: 500px;
+    }
+
+    .aboutme p {
+      padding-left: 65px;
+    }
+
+    .wrapper {
+      margin: 80px;
+      display: flex;
+      max-width: 1024px;
+    }
+
+    .access,
+    .contact {
+      padding: 0px;
+    }
+
+    .access iframe {
+      width: 477px;
+    }
+
+    .address {
+      margin-bottom: 13px;
+    }
+
+    .contact {
+      padding-left: 65px;
+    }
+
+    .contact a {
+      margin-top: 60px;
+    }
+
+    footer {
+      height: 50px;
+    }
+
+    footer p {
+      font-size: 20px;
+      padding-left: 100px;
+    }
+
+    .guidancemenu {
+      margin: 80px auto;
+      font-size: 30px;
+    }
+
+    .guidancemenu::before {
+      font-size: 48px;
+      top: -22px;
+    }
+
+    .guide {
+      margin: 0 auto 80px;
+    }
+
+    .guide img {
+      width: 640px;
+    }
+
+    .guidedetail {
+      width: 387px;
+      margin: 0;
+    }
+
+    .guidedetail p {
+      font-size: 20px;
+      margin: 70px auto;
+    }
+
+    .schoolfee,
+    .event {
+      padding: 80px 22px;
+    }
+
+    .fee,
+    .event1,
+    .event2 {
+      max-width: 1080px;
+      margin: auto;
+    }
+
+    .feetable {
+      max-width: 500px;
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .feedetail {
+      width: 578px;
+      font-size: 20px;
+      font-weight: 100;
+    }
+
+    .feedetail li {
+      margin-left: 60px;
+    }
+
+    .event1 p,
+    .event2 p {
+      width: 480px;
+    }
+
+    .recital img,
+    .competition img {
+      width: 500px;
+    }
+  }
+
+  /*　ブラウザ幅1184px以上での表示設定　*/
+  @media screen and (min-width: 1184px) {
+    .wrapper {
+      margin: 80px auto;
+    }
+
+    .guide {
+      margin: 0 auto 80px;
+      justify-content: space-between;
+      max-width: 1080px;
+    }
+
+    .guidedetail p {
+      width: 387px;
+      margin: 83px auto;
+    }
+
+    .feedetail {
+      margin: 0;
+    }
+
+    .feedetail li {
+      width: 578px;
+      margin-left: 90px;
+    }
+
+    .competition {
+      margin-bottom: 0;
+    }
+
+    .recital img,
+    .competition img {
+      width: 640px;
+    }
+
+    .recital p,
+    .competition p {
+      margin-left: 60px;
+    }
+  }
+}
