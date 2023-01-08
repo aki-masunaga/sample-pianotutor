@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./destyle.css">
+
+    <!--Font Awesome6の読み込み-->
+    <script src="https://kit.fontawesome.com/4efa30906d.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>○○○○ピアノ教室</title>
+</head>
+
+<body>
+    <!-- 本文 -->
+
+    <!--　ヘッダー　-->
+    <header>
+        <h1>
+            <a href="index.html" class="logo">
+                <img src="./logo.gif" alt="○○○○ピアノ教室">
+            </a>
+        </h1>
+        <div class="navi">
+            <nav class="global_navi">
+                <ul class="nav__items">
+                    <li><a href="guidance.html" class="nav-items__item">教室のご案内</a></li>
+                    <li><a href="#" class="nav-items__item">講師プロフィール</a></li>
+                    <li><a href="#" target="_blank" class="nav-items__item">講師ブログ</a></li>
+                    <li><a href="#" class="nav-items__item">お問合せ</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="hamburger-menu">
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn"><span></span></label>
+            <!--ここからメニュー-->
+            <div class="menu-content">
+                <ul>
+                    <li>
+                        <a href="guidance.html">教室のご案内</a>
+                    </li>
+                    <li>
+                        <a href="#">講師プロフィール</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">講師ブログ</a>
+                        <!--amebloなどの場合は別ウィンドウで開く-->
+                    </li>
+                    <li>
+                        <a href="#">お問合せ</a>
+                    </li>
+                </ul>
+            </div>
+            <!--ここまでメニュー-->
+        </div>
+    </header>
+
+    <main>
+        <h2 class="guidancemenu">教室のご案内</h2>
+
+        <div class="guide">
+            <div class="guidedetail">
+                <p>こんな曲が弾けるようになりたい、コンクールに出てみたい、保育士の資格を取りたい、趣味として楽しみたいなど、ご希望をお聞かせください。お一人お一人に合ったレッスン内容をご提供いたします。<br>
+                    【使用楽器】グランドピアノ<br>
+                    YAMAHA&emsp;C5<br>
+                    <!--「&emsp;」全角スペース-->
+                    YAMAHA&emsp;C3XA<br>
+                </p>
+            </div>
+            <img src="./grandpiano.jpg" alt="教室のピアノ">
+        </div>
+
+        <div class="schoolfee">
+            <h3 class="items">レッスン料</h3>
+            <div class="fee">
+                <table class="feetable">
+                    <thead>
+                        <tr>
+                            <th>グレード</th>
+                            <th>時間</th>
+                            <th>料金</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="grade">初級</td>
+                            <td class="grade">40分</td>
+                            <td class="yen">8,000円</td>
+                        </tr>
+                        <tr>
+                            <td class="grade">中級</td>
+                            <td class="grade">40分</td>
+                            <td class="yen">9,000円</td>
+                        </tr>
+                        <tr>
+                            <td class="grade">上級</td>
+                            <td class="grade">40分</td>
+                            <td class="yen">10,000円</td>
+                        </tr>
+                        <tr>
+                            <td class="grade">上級〜</td>
+                            <td class="grade">50分</td>
+                            <td class="yen">12,000円</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul class="feedetail">
+                    <li>
+                        レッスンは、月3回です。<br>
+                        大人の方は月2回レッスンも可能です。<br>
+                        また、受講生の保護者様へのパパママレッスンも承ります。詳しくは講師へお問合せください。
+                    </li>
+                    <li>
+                        ※教材費が別途かかります<br>
+                        ※入会金はありません<br>
+                        ※お休みされたい場合は、事前にご連絡いただけましたら月1回のみ、翌月末まで振替え可能です
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="event">
+            <h3 class="items">イベント</h3>
+
+            <div class="event1">
+                <h4 class="useicon">発表会</h4>
+                <div class="recital">
+                    <img src="./recital.jpg" alt="ピアノ発表会">
+                    <p>
+                        年１回、日頃の練習の成果を発揮する場として、春頃に実施しています。<br>
+                        受講生の皆様は、原則として全員に参加をお願いしております。<br>
+                        ソロ演奏の他、お子さんや兄弟姉妹と連弾したり、歌を歌ったり、毎回趣向を変えていますので、ぜひ楽しんでください。
+                    </p>
+                </div>
+            </div>
+
+            <div class="event2">
+                <h4 class="useicon">コンクール</h4>
+                <div class="competition">
+                    <img src="./competition.jpg" alt="コンクール">
+                    <p>
+                        各種コンクールやピ○ィナステップの出場も、全力でサポートしております。申込み時期がまいりましたら、随時お声がけしますので、ぜひご検討ください。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Copyright&copy;2022 All Rights Reserved.</p>
+    </footer>
+
+
+</body>
+
+</html>
