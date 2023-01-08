@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/destyle.css">
+    <!--jQuery読み込み-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- slick.css 基本のCSS -->
+    <link rel="stylesheet" href="slick/slick.css">
+    <!-- slick-theme.css 見た目の装飾などを設定しているCSS -->
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <!-- slick.min.js Slickのプログラム本体-->
+    <script src="slick/slick.min.js"></script>
+    <!-- script.jsがjsフォルダの中に入っているのでjs/からスタート -->
+    <script src="js/script.js"></script>
+
+    <!--Google Font読み込み-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>○○○○ピアノ教室</title>
+</head>
+
+<body>
+    <!-- 本文 -->
+
+    <!--　ヘッダー　-->
+    <header>
+        <h1>
+            <a href="#" class="logo">
+                <img src="./logo.gif" alt="○○○○ピアノ教室">
+            </a>
+        </h1>
+        <div class="navi">
+            <nav class="global_navi">
+                <ul class="nav__items">
+                    <li><a href="guidance.html" class="nav-items__item">教室のご案内</a></li>
+                    <li><a href="#" class="nav-items__item">講師プロフィール</a></li>
+                    <li><a href="#" target="_blank" class="nav-items__item">講師ブログ</a></li>
+                    <li><a href="#" class="nav-items__item">お問合せ</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="hamburger-menu">
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn"><span></span></label>
+            <!--ここからメニュー-->
+            <div class="menu-content">
+                <ul>
+                    <li>
+                        <a href="guidance.html">教室のご案内</a>
+                    </li>
+                    <li>
+                        <a href="#">講師プロフィール</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">講師ブログ</a>
+                        <!--amebloなどの場合は別ウィンドウで開く-->
+                    </li>
+                    <li>
+                        <a href="#">お問合せ</a>
+                    </li>
+                    <li>
+                        <a href="index.html">ホーム</a>
+                    </li>
+                </ul>
+            </div>
+            <!--ここまでメニュー-->
+        </div>
+
+
+    </header>
+
+    <main>
+
+
+    <div class="slider">
+        <img src="./header_piano.jpg" alt="グランドピアノ">
+        <img src=".header_piano2.jpg" alt="グランドピアノの中">
+        <img src="./header_kid.jpg" alt="ピアノを弾く受講生">
+        <img src="./header_pianist.jpg" alt="ピアノ講師">
+        <img src="./header_piano3.jpg" alt="ピアノレッスン">
+    </div>
+
+        <p class="about">
+            ピアノの基礎力をつけながら、音楽の楽しさと豊かな心を育んでいく教室です。<br>
+            幼児からシニアまで、丁寧にご指導いたします。<br>
+            一人一人に合わせたオーダーメイドのレッスンで、楽しくピアノを弾いてみませんか？<br>
+        </p>
+
+        <!-- 教室の特徴 -->
+        <div class="feature">
+            <h2 class="items">
+                こんな教室です
+            </h2>
+            <ul class="feature-list">
+                <li>
+                    <img src="./feature1.jpg" alt="特徴1">
+                    <p>
+                        経験豊富な講師による<br>
+                        マンツーマンレッスン
+                    </p>
+                </li>
+                <li>
+                    <img src="./feature2.jpg" alt="特徴2">
+                    <p>
+                        レッスン生の保護者様<br>
+                        にも指導致します♪
+                    </p>
+                </li>
+                <li>
+                    <img src="./feature3.jpg" alt="特徴3">
+                    <p>
+                        年に１回発表会を開催。<br>
+                        コンクール出場も徹底的に<br>
+                        サポート致します♪
+                    </p>
+                </li>
+            </ul>
+
+            <a href="guidance.html" class="detail">詳しくはこちら</a>
+
+        </div>
+
+        <!--　講師の紹介　-->
+        <div class="pianist">
+            <h2 class="items">
+                講師はこんな人です
+            </h2>
+
+            <div class="aboutme">
+
+                <img src="./pianist.jpg" alt="講師">
+
+                <p>
+                    ヤ○ハ音楽教室システム講師を経て○○年に独立し、小さいお子さんからシニア世代まで、幅広く指導しております。<br>
+                    モットーは、ピアノを通して音楽を楽しんでもらうこと。<br>
+                    弾く力だけでなく、ソルフェージュ（講師がピアノで弾いたメロディを五線に書き取る練習）も行ない、聴く力の向上にも努めています。<br>
+                    音楽を楽しみ豊かな感性を身につけてみませんか？
+                </p>
+            </div>
+
+            <a href="#" class="profile">経歴はこちら</a>
+
+        </div>
+
+        <div class="wrapper">
+
+            <!--　場所　-->
+            <div class="access">
+                <h2 class="items">アクセス</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.6002306746655!2d130.41853871520297!3d33.58972748073436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354191c7e6f9b375%3A0x2ee22b3d45b98b90!2z5Y2a5aSa6aeF!5e0!3m2!1sja!2sjp!4v1672884689568!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p class="address">
+                    〒○○○-○○○○<br>
+                    ○○市○区○○○○丁目○番地○○<br>
+                </p>
+                <p>
+                    ○○駅から徒歩○分<br>
+                    駐車場有（要事前予約）
+                </p>
+            </div>
+
+            <!--　問い合わせ先　-->
+            <div class="contact">
+                <h2 class="items">お問合せ</h2>
+                <p>
+                    当教室では随時、体験レッスンを行っております。体験レッスンのお問合せやご質問・ご相談などございましたら、下記リンク先よりご連絡下さい。お待ちしております！
+                </p>
+                <a href="#" class="contactform">お問合せはこちら</a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Copyright&copy;2022 All Rights Reserved.</p>
+    </footer>
+
+
+</body>
+
+</html>
