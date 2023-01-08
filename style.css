@@ -36,6 +36,9 @@ li {
   list-style-type:none;
 }
 
+a:any-link {
+  color:#fff;
+}
 
 /*　幅1024px未満では、グローバルナビ非表示　*/
 .global_navi {
