@@ -32,6 +32,11 @@ h1 {
   padding: 20px;
 }
 
+li {
+  list-style-type:none;
+}
+
+
 /*　幅1024px未満では、グローバルナビ非表示　*/
 .global_navi {
   display: none;
